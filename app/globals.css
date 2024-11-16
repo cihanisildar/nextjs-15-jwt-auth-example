@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-poppins), sans-serif;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #000;
+  box-shadow: 0 0 0 0 #0004;
+  animation: l1 1s infinite;
+}
+@keyframes l1 {
+  100% {
+    box-shadow: 0 0 0 30px #0000;
+  }
+}
